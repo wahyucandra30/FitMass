@@ -34,10 +34,16 @@ class LoginActivity : AppCompatActivity() {
                 var db = dbObj.readableDatabase
 
                 var result = db.rawQuery("SELECT * FROM Users WHERE username = ? AND password = ?", args)
-                if(result.moveToNext())
-                    Toast.makeText(context, "Welcome Back", Toast.LENGTH_SHORT).show()
-                else
+                if(result.moveToNext()) {
+                    val i = Intent(this@LoginActivity, DashboardActivity::class.java)
+                    i.putExtra("username",usernameValue);
+                    i.putExtra("avatar",usernameValue.substring(0, 1).uppercase());
+                    startActivity(i)
+                    //Toast.makeText(context, "Welcome Back", Toast.LENGTH_SHORT).show()
+                }
+                else {
                     Toast.makeText(context, "Invalid Credentials", Toast.LENGTH_SHORT).show()
+                }
             }
             else{
                 Toast.makeText(context, "Please fill all data", Toast.LENGTH_SHORT).show()

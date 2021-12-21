@@ -1,3 +1,40 @@
 <resources>
-    <string name="app_name">pab_main</string>
+    <string name="app_name">Fit Mass</string>
+    <string name="txusername">Username</string>
+    <string name="txfit">Fit</string>
+    <string name="txmass">Mass</string>
+    <string name="txemail">Email</string>
+    <string name="txpassword">Password</string>
+    <string name="txregister">REGISTER</string>
+    <string name="txlogin">LOGIN</string>
+
+<!--Dashboard-->
+    <string name="desLevel">LEVEL</string>
+    <string name="desKuis">QUIS ANSWERED</string>
+    <string name="desDayStreak">DAY STREAK</string>
+
+<!--Pertanyaan Kuis-->
+    <!--Artikel Pertama -->
+    <string name="pertanyaan1">Manakah tipe-tipe obesitas?Kecuali</string>
+    <!--   Pilihan-->
+    <string name="pilihan1">Tipe buah apel</string>
+    <string name="pilihan2">Tipe buah pear </string>
+    <string name="pilihan3">Tipe Ovid</string>
+    <string name="pilihan4">Tipe Mangga</string>
+
+    <string name="pertanyaan2">Tipe Obesitas Berdasarkan Keadaan Sel Lemak?</string>
+    <!--   Pilihan-->
+    <string name="pilihan5">Tipe Hyperplastik</string>
+    <string name="pilihan6">Tipe Hyperbola </string>
+    <string name="pilihan7">Tipe Maskulin</string>
+    <string name="pilihan8">Tipe Kurus</string>
+
+    <string name="pertanyaan3">Apakah itu obesitas Tipe Hypertropik?</string>
+    <!--   Pilihan-->
+    <string name="pilihan9">Obesitas terjadi karena jumlah sel lemak yang lebih banyak </string>
+    <string name="pilihan10">Obesitas terjadi karna makan buah </string>
+    <string name="pilihan11">Obesitas bawaan genetic</string>
+    <string name="pilihan12">Semua pilihan jawaban benar</string>
+
+
 </resources>
