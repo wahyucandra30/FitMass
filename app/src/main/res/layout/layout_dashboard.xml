@@ -193,6 +193,7 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
                 android:gravity="center_horizontal"
                 android:orientation="vertical">
 
@@ -207,32 +208,16 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Health Article"
+                    android:text="Health\nArticle"
                     android:textAlignment="center"
                     android:textColor="#FFFFFF"
                     android:textSize="20sp" />
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:gravity="center_horizontal"
-            android:orientation="horizontal">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="15dp"
-                android:gravity="center_horizontal"
-                android:orientation="vertical">
 
                 <ImageButton
                     android:id="@+id/btMenu"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
                     android:background="@mipmap/ic_menuchicken_foreground"
                     android:scaleX="1.5"
                     android:scaleY="1.5" />
@@ -244,19 +229,37 @@
                     android:textAlignment="center"
                     android:textColor="#FFFFFF"
                     android:textSize="20sp" />
+
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
+                android:layout_marginStart="10dp"
                 android:gravity="center_horizontal"
                 android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/btCalorie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/ic_bmrscale_foreground"
+                    android:scaleX="1.5"
+                    android:scaleY="1.5" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BMR \n Calculator"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp" />
 
                 <ImageButton
                     android:id="@+id/btCalculator"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
                     android:background="@mipmap/ic_bmicalc_foreground"
                     android:scaleX="1.5"
                     android:scaleY="1.5" />
@@ -268,6 +271,7 @@
                     android:textAlignment="center"
                     android:textColor="#FFFFFF"
                     android:textSize="20sp" />
+
             </LinearLayout>
 
         </LinearLayout>
@@ -277,7 +281,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="90dp"
+            android:layout_marginTop="70dp"
             android:layout_marginEnd="20dp"
             android:background="@drawable/buttonidle_selector"
             android:backgroundTint="#FD5D5D"

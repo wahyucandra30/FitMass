@@ -3,6 +3,7 @@ import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import android.widget.Toast
+import com.example.fitmass.Article
 import com.example.fitmass.User
 
 val DATABASE_NAME = "MyDB"
@@ -11,12 +12,23 @@ val COL_USERNAME = "username"
 val COL_EMAIL = "email"
 val COL_PASSWORD = "password"
 val COL_ID = "id"
+
+val TABLE_NAME_2 = "Articles"
+val COL_TITLE = "title"
+val COL_CONTENT = "content"
+val COL_AUTHOR = "author"
+val COL_ID_2 = "id"
+
 class DataBaseHelper(var context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, null,1) {
 
     override fun onCreate(db: SQLiteDatabase?) {
-        val createTable =
+        val createUserTable=
             "CREATE TABLE $TABLE_NAME ($COL_ID INTEGER PRIMARY KEY AUTOINCREMENT,$COL_USERNAME VARCHAR(256),$COL_EMAIL VARCHAR(256),$COL_PASSWORD VARCHAR(256))"
-        db?.execSQL(createTable)
+        db?.execSQL(createUserTable)
+
+        val createArticlesTable =
+            "CREATE TABLE $TABLE_NAME_2 ($COL_ID_2 INTEGER PRIMARY KEY AUTOINCREMENT,$COL_TITLE VARCHAR(256),$COL_CONTENT TEXT,$COL_AUTHOR VARCHAR(256))"
+        db?.execSQL(createArticlesTable)
     }
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
         //onCreate(db);
@@ -37,20 +49,20 @@ class DataBaseHelper(var context: Context) : SQLiteOpenHelper(context, DATABASE_
         }
     }
 
-    fun readData(): MutableList<User> {
-        var list : MutableList<User> = ArrayList()
+    fun getArticleList(): MutableList<Article> {
+        var list : MutableList<Article> = ArrayList()
 
         val db = this.readableDatabase
-        val query = "Select * from " + TABLE_NAME
+        val query = "Select * from " + TABLE_NAME_2
         val result = db.rawQuery(query, null)
         if (result.moveToFirst()) {
             do {
-                val user = User()
-                user.id = result.getString(result.getColumnIndexOrThrow(COL_ID)).toInt()
-                user.username = result.getString(result.getColumnIndexOrThrow(COL_USERNAME))
-                user.email = result.getString(result.getColumnIndexOrThrow(COL_EMAIL))
-                user.password = result.getString(result.getColumnIndexOrThrow(COL_PASSWORD))
-                list.add(user)
+                val article = Article()
+                article.id = result.getString(result.getColumnIndexOrThrow(COL_ID_2)).toInt()
+                article.title = result.getString(result.getColumnIndexOrThrow(COL_TITLE))
+                article.content = result.getString(result.getColumnIndexOrThrow(COL_CONTENT))
+                article.author = result.getString(result.getColumnIndexOrThrow(COL_AUTHOR))
+                list.add(article)
             }
             while (result.moveToNext())
         }

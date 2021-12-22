@@ -16,12 +16,27 @@ class DashboardActivity : AppCompatActivity() {
         val tvAvatar = findViewById<TextView>(R.id.tvAvatar)
         val tvUsername = findViewById<TextView>(R.id.tvUsername)
         val btSignOut = findViewById<TextView>(R.id.btSignOut)
+        val btBMI = findViewById<ImageButton>(R.id.btCalculator)
+        val btBMR = findViewById<ImageButton>(R.id.btCalorie)
 
         tvAvatar.text = intent.getStringExtra("avatar")
         tvUsername.text = intent.getStringExtra("username")
 
         btSignOut.setOnClickListener{
             val i = Intent(this@DashboardActivity, SplashActivity::class.java)
+            startActivity(i)
+        }
+        btBMI.setOnClickListener{
+            val i = Intent(this@DashboardActivity, BMIActivity::class.java)
+            i.putExtra("username",intent.getStringExtra("username"));
+            i.putExtra("avatar",intent.getStringExtra("avatar"));
+            startActivity(i)
+        }
+
+        btBMR.setOnClickListener{
+            val i = Intent(this@DashboardActivity, BMRActivity::class.java)
+            i.putExtra("username",intent.getStringExtra("username"));
+            i.putExtra("avatar",intent.getStringExtra("avatar"));
             startActivity(i)
         }
     }

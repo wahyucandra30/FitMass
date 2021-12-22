@@ -15,9 +15,12 @@
         <entry key="..\:/Dev/Github Repos/FitMass/app/src/main/res/drawable/inputborderbottomnofill_selector.xml" value="0.10185185185185185" />
         <entry key="..\:/Dev/Github Repos/FitMass/app/src/main/res/drawable/roundstyle.xml" value="0.2203125" />
         <entry key="..\:/Dev/Github Repos/FitMass/app/src/main/res/drawable/roundstyle2.xml" value="0.2203125" />
+        <entry key="..\:/Dev/Github Repos/FitMass/app/src/main/res/layout/activity_calorie.xml" value="0.13269927536231885" />
         <entry key="..\:/Dev/Github Repos/FitMass/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Dev/Github Repos/FitMass/app/src/main/res/layout/ativity_dashboard.xml" value="0.15896739130434784" />
-        <entry key="..\:/Dev/Github Repos/FitMass/app/src/main/res/layout/layout_dashboard.xml" value="0.12" />
+        <entry key="..\:/Dev/Github Repos/FitMass/app/src/main/res/layout/layout_bmi.xml" value="0.25" />
+        <entry key="..\:/Dev/Github Repos/FitMass/app/src/main/res/layout/layout_calorie.xml" value="0.25" />
+        <entry key="..\:/Dev/Github Repos/FitMass/app/src/main/res/layout/layout_dashboard.xml" value="0.2" />
         <entry key="..\:/Dev/Github Repos/FitMass/app/src/main/res/layout/layout_login.xml" value="0.33" />
         <entry key="..\:/Dev/Github Repos/FitMass/app/src/main/res/layout/layout_register.xml" value="0.2" />
         <entry key="..\:/Dev/Github Repos/FitMass/app/src/main/res/layout/layout_splash.xml" value="0.2" />

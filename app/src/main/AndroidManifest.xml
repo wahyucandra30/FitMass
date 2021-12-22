@@ -19,7 +19,12 @@
         <activity
             android:name=".DashboardActivity"
             android:exported="true" />
-
+        <activity
+            android:name=".BMIActivity"
+            android:exported="true" />
+        <activity
+            android:name=".BMRActivity"
+            android:exported="true" />
         <activity
             android:name="com.example.fitmass.SplashActivity"
             android:exported="true">

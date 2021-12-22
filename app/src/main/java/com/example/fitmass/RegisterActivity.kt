@@ -43,6 +43,9 @@ class RegisterActivity : AppCompatActivity() {
                     var db = DataBaseHelper(context)
 
                 db.insertData(user)
+
+                val i = Intent(this@RegisterActivity, LoginActivity::class.java)
+                startActivity(i)
             }
             else{
                 Toast.makeText(context, "Please fill all data", Toast.LENGTH_SHORT)
