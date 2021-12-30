@@ -26,6 +26,9 @@
             android:name=".BMRActivity"
             android:exported="true" />
         <activity
+            android:name=".MenuRecActivity"
+            android:exported="true" />
+        <activity
             android:name="com.example.fitmass.SplashActivity"
             android:exported="true">
             <intent-filter>
