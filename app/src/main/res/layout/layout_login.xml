@@ -28,9 +28,10 @@
             android:layout_height="wrap_content"
             android:layout_weight="@null"
             android:backgroundTint="#00B54E4E"
-            android:tint="#CCCCCC"
             android:tintMode="multiply"
-            app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
+            app:srcCompat="@drawable/ic_baseline_arrow_back_24"
+            app:tint="#CCCCCC"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
         <TextView
             android:id="@+id/textView"
