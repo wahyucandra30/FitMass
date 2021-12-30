@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "849272596582",
+    "firebase_url": "https://fitmass-c2908-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "fitmass-c2908",
+    "storage_bucket": "fitmass-c2908.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:849272596582:android:6f6665674b45adf8dde5a7",
+        "android_client_info": {
+          "package_name": "com.example.pab_main"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "849272596582-gdbdtesiof6jpu20rdlpeggj332bpthr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1HtTcwpCHxxlwsnxx1z6x9b08TViwIXA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "849272596582-gdbdtesiof6jpu20rdlpeggj332bpthr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

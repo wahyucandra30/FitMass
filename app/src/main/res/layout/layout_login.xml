@@ -64,7 +64,7 @@
             android:background="@drawable/inputborder_selector"
             android:ems="10"
             android:fontFamily="sans-serif-medium"
-            android:hint="Username"
+            android:hint="Email"
             android:inputType="textPersonName"
             android:paddingStart="20dp"
             android:textColor="#5E5E5E" />

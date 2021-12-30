@@ -1,19 +1,26 @@
 package com.example.fitmass
 
-import DataBaseHelper
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import com.google.android.gms.tasks.OnCompleteListener
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
-class LoginActivity : AppCompatActivity() {
-
-    override fun onCreate(savedInstanceState: Bundle?) {
+class LoginActivity : AppCompatActivity()
+{
+    private lateinit var dbAuth: FirebaseAuth
+    override fun onCreate(savedInstanceState: Bundle?)
+    {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.layout_login)
+
+        dbAuth = Firebase.auth
 
         val etUsername = findViewById<EditText>(R.id.etUsername)
         val pwPassword = findViewById<EditText>(R.id.pwPassword)
@@ -21,38 +28,49 @@ class LoginActivity : AppCompatActivity() {
         val btBack = findViewById<ImageButton>(R.id.btBack)
 
         val context = this
-        btLogin.setOnClickListener{
-            var usernameValue = ""
+        btLogin.setOnClickListener {
+            var emailValue = ""
             var passwordValue = ""
 
-            usernameValue = etUsername.text.toString()
+            emailValue = etUsername.text.toString()
             passwordValue = pwPassword.text.toString()
 
-            if(usernameValue.length > 0 && passwordValue.length > 0){
-                var args = listOf<String>(usernameValue, passwordValue).toTypedArray()
-                var dbObj = DataBaseHelper(context)
-                var db = dbObj.readableDatabase
-
-                var result = db.rawQuery("SELECT * FROM Users WHERE username = ? AND password = ?", args)
-                if(result.moveToNext()) {
-                    val i = Intent(this@LoginActivity, DashboardActivity::class.java)
-                    i.putExtra("username",usernameValue);
-                    i.putExtra("avatar",usernameValue.substring(0, 1).uppercase());
-                    startActivity(i)
-                    //Toast.makeText(context, "Welcome Back", Toast.LENGTH_SHORT).show()
-                }
-                else {
-                    Toast.makeText(context, "Invalid Credentials", Toast.LENGTH_SHORT).show()
-                }
+            if (emailValue.isNotEmpty() && passwordValue.isNotEmpty())
+            {
+                signIn(emailValue, passwordValue)
             }
-            else{
-                Toast.makeText(context, "Please fill all data", Toast.LENGTH_SHORT).show()
+            else
+            {
+                Toast.makeText(context, "Incomplete credentials", Toast.LENGTH_SHORT).show()
             }
         }
 
-        btBack.setOnClickListener{
+        btBack.setOnClickListener {
             val i = Intent(this@LoginActivity, SplashActivity::class.java)
             startActivity(i)
         }
+    }
+
+    private fun signIn(email: String, password: String)
+    {
+        dbAuth.signInWithEmailAndPassword(email, password)
+            .addOnCompleteListener(this) { task ->
+                if (task.isSuccessful)
+                {
+                    Toast.makeText(
+                        this@LoginActivity,
+                        "Successfully Logged In",
+                        Toast.LENGTH_LONG
+                    )
+                        .show()
+                    val intent = Intent(this@LoginActivity, DashboardActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                }
+                else
+                {
+                    Toast.makeText(this, "Login Failed", Toast.LENGTH_LONG).show()
+                }
+            }
     }
 }

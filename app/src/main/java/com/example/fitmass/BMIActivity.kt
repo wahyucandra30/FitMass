@@ -1,16 +1,17 @@
 package com.example.fitmass
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.view.View.VISIBLE
 import android.widget.*
-import com.example.fitmass.R
+import androidx.appcompat.app.AppCompatActivity
 import kotlin.math.pow
 
-class BMIActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
+class BMIActivity : AppCompatActivity()
+{
+    override fun onCreate(savedInstanceState: Bundle?)
+    {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.layout_bmi)
         supportActionBar?.hide()
@@ -28,45 +29,57 @@ class BMIActivity : AppCompatActivity() {
 
         bmiStatus.visibility = View.INVISIBLE
 
-        btBack.setOnClickListener{
+        btBack.setOnClickListener {
             val i = Intent(this@BMIActivity, DashboardActivity::class.java)
-            i.putExtra("username",intent.getStringExtra("username"));
-            i.putExtra("avatar",intent.getStringExtra("avatar"));
+            i.putExtra("username", intent.getStringExtra("username"))
+            i.putExtra("avatar", intent.getStringExtra("avatar"))
             startActivity(i)
         }
 
         genderGroup.setOnCheckedChangeListener { group, checkedId ->
-            if (checkedId == R.id.rdMale) {
+            if (checkedId == R.id.rdMale)
+            {
                 Toast.makeText(this, male.text.toString(), Toast.LENGTH_SHORT).show()
             }
-            if (checkedId == R.id.rdFemale) {
+            if (checkedId == R.id.rdFemale)
+            {
                 Toast.makeText(this, female.text.toString(), Toast.LENGTH_SHORT).show()
             }
         }
         calculateButton.setOnClickListener {
             var weightValue = 0.0
             var heightValue = 0.0
-            if (weight.text.toString().isNotEmpty()) {
+            if (weight.text.toString().isNotEmpty())
+            {
                 weightValue = weight.text.toString().toDouble()
             }
-            if (height.text.toString().isNotEmpty()) {
+            if (height.text.toString().isNotEmpty())
+            {
                 heightValue = (height.text.toString().toDouble() / 100)
             }
-            if (weightValue > 0.0 && heightValue > 0.0) {
+            if (weightValue > 0.0 && heightValue > 0.0)
+            {
                 val bmiValue = String.format("%.2f", weightValue / heightValue.pow(2))
                 bmi.text = bmiValue
                 bmiStatus.text = bmiStatusValue(weightValue / heightValue.pow(2))
                 bmiStatus.visibility = View.VISIBLE
                 bmiView.visibility = VISIBLE
                 calculateButton.visibility = VISIBLE
-            } else
-                Toast.makeText(this, "Please Input Weight and Height Values greater than 0", Toast.LENGTH_LONG).show()
+            }
+            else
+                Toast.makeText(
+                    this,
+                    "Please Input Weight and Height Values greater than 0",
+                    Toast.LENGTH_LONG
+                ).show()
         }
 
     }
 
-    private fun bmiStatusValue(bmi: Double): String {
-        var bmiStatus: String = when {
+    private fun bmiStatusValue(bmi: Double): String
+    {
+        var bmiStatus: String = when
+        {
             bmi < 18.5 -> "Underweight"
             bmi >= 18.5 && bmi < 25 -> "Normal"
             bmi >= 25 && bmi < 30 -> "Overweight"

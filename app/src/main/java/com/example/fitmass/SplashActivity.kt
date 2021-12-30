@@ -1,25 +1,26 @@
 package com.example.fitmass
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import android.widget.ImageButton
+import androidx.appcompat.app.AppCompatActivity
 
-class SplashActivity : AppCompatActivity() {
+class SplashActivity : AppCompatActivity()
+{
 
-    override fun onCreate(savedInstanceState: Bundle?) {
+    override fun onCreate(savedInstanceState: Bundle?)
+    {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.layout_splash)
 
         val btRegister = findViewById<Button>(R.id.btRegister)
         val btLogin = findViewById<Button>(R.id.btLogin)
 
-        btRegister.setOnClickListener{
+        btRegister.setOnClickListener {
             val i = Intent(this@SplashActivity, RegisterActivity::class.java)
             startActivity(i)
         }
-        btLogin.setOnClickListener{
+        btLogin.setOnClickListener {
             val i = Intent(this@SplashActivity, LoginActivity::class.java)
             startActivity(i)
         }
