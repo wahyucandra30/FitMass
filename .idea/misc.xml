@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Dev/Github Repos/FitMass/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2203125" />
+        <entry key="..\:/Dev/Github Repos/FitMass/app/src/main/res/drawable/border_selector.xml" value="0.2203125" />
         <entry key="..\:/Dev/Github Repos/FitMass/app/src/main/res/drawable/button_selector.xml" value="0.2203125" />
         <entry key="..\:/Dev/Github Repos/FitMass/app/src/main/res/drawable/buttonidle_selector.xml" value="0.1037037037037037" />
         <entry key="..\:/Dev/Github Repos/FitMass/app/src/main/res/drawable/buttonpop_selector.xml" value="0.1037037037037037" />
@@ -18,6 +19,7 @@
         <entry key="..\:/Dev/Github Repos/FitMass/app/src/main/res/layout/activity_calorie.xml" value="0.13269927536231885" />
         <entry key="..\:/Dev/Github Repos/FitMass/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Dev/Github Repos/FitMass/app/src/main/res/layout/ativity_dashboard.xml" value="0.15896739130434784" />
+        <entry key="..\:/Dev/Github Repos/FitMass/app/src/main/res/layout/layout_articleview.xml" value="0.25" />
         <entry key="..\:/Dev/Github Repos/FitMass/app/src/main/res/layout/layout_bmi.xml" value="0.25" />
         <entry key="..\:/Dev/Github Repos/FitMass/app/src/main/res/layout/layout_calorie.xml" value="0.25" />
         <entry key="..\:/Dev/Github Repos/FitMass/app/src/main/res/layout/layout_dashboard.xml" value="0.2" />

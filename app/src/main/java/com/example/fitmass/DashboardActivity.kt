@@ -25,6 +25,7 @@ private lateinit var dbAuth: FirebaseAuth
         val btBMI = findViewById<ImageButton>(R.id.btCalculator)
         val btBMR = findViewById<ImageButton>(R.id.btCalorie)
         val btMenu = findViewById<ImageButton>(R.id.btMenu)
+        val btArticles = findViewById<ImageButton>(R.id.btArticle)
 
         val displayName: String = dbAuth.currentUser.displayName
         val initials: String = displayName.substring(0, 1)
@@ -47,6 +48,10 @@ private lateinit var dbAuth: FirebaseAuth
         }
         btMenu.setOnClickListener {
             val i = Intent(this@DashboardActivity, MenuRecActivity::class.java)
+            startActivity(i)
+        }
+        btArticles.setOnClickListener {
+            val i = Intent(this@DashboardActivity, ArticleViewActivity::class.java)
             startActivity(i)
         }
     }
