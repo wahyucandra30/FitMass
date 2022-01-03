@@ -7,6 +7,7 @@
     android:background="#E822242C"
     android:backgroundTintMode="add"
     android:paddingEnd="0dp"
+    android:scrollbarStyle="outsideInset"
     android:verticalScrollbarPosition="defaultPosition"
     tools:context=".SplashActivity">
 
@@ -104,6 +105,7 @@
             android:background="@drawable/border_selector"
             android:paddingStart="10dp"
             android:paddingTop="10dp"
+            android:scrollbarStyle="insideOverlay"
             android:scrollbars="vertical"
             android:verticalScrollbarPosition="right">
 

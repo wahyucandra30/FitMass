@@ -13,6 +13,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:gravity="center_horizontal"
         android:orientation="vertical">
 
         <LinearLayout
@@ -20,7 +21,8 @@
             android:layout_height="70dp"
             android:background="@drawable/inputborderbottomnofill_selector"
             android:gravity="center_vertical"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:paddingBottom="8dp">
 
             <ImageView
                 android:id="@+id/imageView"
@@ -46,12 +48,13 @@
                     android:textSize="13sp" />
 
                 <TextView
+                    android:id="@+id/tvLevel"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="0dp"
                     android:layout_weight="1"
                     android:gravity="top"
-                    android:text="1"
+                    android:text="0"
                     android:textColor="#FBFBFA"
                     android:textSize="20sp" />
             </LinearLayout>
@@ -60,7 +63,7 @@
                 android:id="@+id/imageView2"
                 android:layout_width="64dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
+                android:layout_marginLeft="30dp"
                 android:layout_weight="0"
                 android:scaleX=".8"
                 android:scaleY=".8"
@@ -81,6 +84,7 @@
                     android:textSize="13sp" />
 
                 <TextView
+                    android:id="@+id/tvQuizCount"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="0dp"
@@ -91,42 +95,17 @@
                     android:textSize="20sp" />
             </LinearLayout>
 
-            <ImageView
-                android:id="@+id/imageView3"
-                android:layout_width="64dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_weight="0"
-                android:scaleX=".7"
-                android:scaleY=".7"
-                app:srcCompat="@drawable/fire" />
-
-            <LinearLayout
+            <ImageButton
+                android:id="@+id/imageButton2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="0"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/textView4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Day Streak"
-                    android:textColor="#FBFBFA"
-                    android:textSize="13sp" />
-
-                <TextView
-                    android:id="@+id/textView5"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="0dp"
-                    android:layout_weight="1"
-                    android:gravity="top"
-                    android:text="0"
-                    android:textColor="#FBFBFA"
-                    android:textSize="20sp" />
-            </LinearLayout>
+                android:layout_marginStart="75dp"
+                android:backgroundTint="#00FFFFFF"
+                android:minHeight="48dp"
+                android:scaleX="2"
+                android:scaleY="2"
+                app:srcCompat="@drawable/ic_settings"
+                tools:ignore="SpeakableTextPresentCheck" />
 
         </LinearLayout>
 
@@ -186,7 +165,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="30dp"
             android:gravity="center_horizontal"
             android:orientation="horizontal">
 
@@ -225,7 +204,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Menu \n Recommendation"
+                    android:text="Nutritional \nInfo"
                     android:textAlignment="center"
                     android:textColor="#FFFFFF"
                     android:textSize="20sp" />
